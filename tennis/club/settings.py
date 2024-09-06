@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'deportes',
     'crispy_forms',
     "crispy_bootstrap4",
+    "profesores"
     
 ]
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"

@@ -17,7 +17,7 @@ class DeporteD(models.Model):
     
     
     def __str__(self):
-        fila=str(self.idDeporte)+"-"+str(self.idCategoria)+"-"+self.nombre
+        fila=str(self.idDeporte)+"-CÓDIGO CATEGORIA"+str(self.idCategoria)+"-NOMBRE CATEGORIA"+self.nombre
         return fila
     
 

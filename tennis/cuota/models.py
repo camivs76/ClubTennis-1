@@ -10,5 +10,5 @@ class Cuota(models.Model):
     importe=models.FloatField(max_length=10,verbose_name="importe")
     
     def __str__(self):
-        fila=str(self.idCuota)+"-"+str(self.id)+"-"+self.nom
+        fila=str(self.idCuota)+"-CÓDIGO JUGADOR/A"+str(self.id)+"-NOMBRE"+self.nom
         return fila
