@@ -10,7 +10,7 @@ from .forms import ProfesorForm
 
 def listaProfesores(request):
     profesores=Profesor.objects.all()
-    return render(request,"Crud/listado.html",{'profesores':profesores})
+    return render(request,"CrudProfesores/listado.html",{'profesores':profesores})
 
 
 def inicio(request):
@@ -26,7 +26,7 @@ def crear_editarProfesores(request,id=0):
         else:
             profesorid=Profesor.objects.get(pk=id)
             formulario=ProfesorForm(instance=profesorid)
-        return render(request,'Crud/Crear.html',{'formulario':formulario})
+        return render(request,'CrudProfesores/Crear.html',{'formulario':formulario})
       else:
         if id==0:
             formulario=ProfesorForm(request.POST or None, request.FILES or None)
@@ -35,10 +35,10 @@ def crear_editarProfesores(request,id=0):
             formulario=ProfesorForm(request.POST or None, request.FILES or None ,instance=profesorid)            
         if formulario.is_valid():
             formulario.save()
-        return redirect('listaProfesor')
+        return redirect('listaProfesores')
         
 def eliminar(request, id):
-    bc=Profesor.objects.get(id=id)
+    bc=Profesor.objects.get(pk=id)
     bc.delete()
-    return redirect('listaProfesor')
+    return redirect('listaProfesores')
         

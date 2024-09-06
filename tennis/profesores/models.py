@@ -1,12 +1,7 @@
 from django.db import models
 
-class Deporte(models.Model):
-    descripcion=models.CharField(max_length=50,verbose_name="descripcion")
-    
-    def __str__(self):
-      fila=self.descripcion
-      return fila
-    
+from jugadores.models import Deporte
+
 # Create your models here.
 class Profesor(models.Model):
     id = models.AutoField(primary_key=True, db_column='id')
