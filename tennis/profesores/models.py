@@ -10,7 +10,7 @@ class Profesor(models.Model):
     fechan=models.DateField(verbose_name="Fecha Nacimiento")
     dire=models.CharField(max_length=50,verbose_name="Direccion")
     cd=models.CharField(max_length=6,verbose_name="codigo postal")
-    descripcion=models.ForeignKey(Deporte, verbose_name="descripcion", on_delete=models.CASCADE)
+    descripcion=models.ForeignKey(Deporte, max_length=50,verbose_name="descripcion", on_delete=models.CASCADE)
     
     
     def __str__(self):

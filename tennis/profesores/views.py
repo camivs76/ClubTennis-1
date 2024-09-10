@@ -24,21 +24,21 @@ def crear_editarProfesores(request,id=0):
         if id==0:
             formulario=ProfesorForm()   
         else:
-            profesorid=Profesor.objects.get(pk=id)
+            profesorid=Profesor.objects.get(id=id)
             formulario=ProfesorForm(instance=profesorid)
         return render(request,'CrudProfesores/Crear.html',{'formulario':formulario})
       else:
         if id==0:
             formulario=ProfesorForm(request.POST or None, request.FILES or None)
         else:
-            profesorid=Profesor.objects.get(pk=id)
+            profesorid=Profesor.objects.get(id=id)
             formulario=ProfesorForm(request.POST or None, request.FILES or None ,instance=profesorid)            
         if formulario.is_valid():
             formulario.save()
         return redirect('listaProfesores')
         
 def eliminar(request, id):
-    bc=Profesor.objects.get(pk=id)
+    bc=Profesor.objects.get(id=id)
     bc.delete()
     return redirect('listaProfesores')
         
