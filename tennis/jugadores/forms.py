@@ -10,7 +10,7 @@ class JugadorForm(forms.ModelForm):
         labels ={
             "DNI" : "DNI" ,
             'nom': 'nombre y apellido',
-            "fechan" : "Fecha de nacimiento" ,
+            "fechan" : "Fecha de nacimiento MES/DÍA/AÑO" ,
             "altura" : "Altura" ,
             "peso" : "Peso" , 
             "dire" : "Direccion",

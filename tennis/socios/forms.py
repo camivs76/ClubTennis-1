@@ -10,7 +10,7 @@ class SocioForm(forms.ModelForm):
         labels ={
             "DNI" : "DNI del socio" ,
             'nom': 'nombre y apellido del socio:',
-            "fechan" : "fecha de nacimiento del socio" ,
+            "fechan" : "fecha de nacimiento del socio MES/DÍA/AÑO" ,
             "dire" : "direccion del socio",
             "cp" : "codigo postal del socio",
             "tel":"Telefono",

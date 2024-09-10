@@ -10,7 +10,7 @@ class ProfesorForm(forms.ModelForm):
         labels ={
             "DNI" : "DNI" ,
             'nom': 'nombre y apellido',
-            "fechan" : "Fecha de nacimiento" ,
+            "fechan" : "Fecha de nacimiento MES/DÍA/AÑO" ,
             "dire" : "Direccion",
             "cd" : "Código postal",
             "descripcion" : "Deporte al que pertenece",
