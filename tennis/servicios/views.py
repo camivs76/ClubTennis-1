@@ -34,7 +34,7 @@ def crear_editarServicio(request,idServicio=0):
             formulario.save()
         return redirect('listaServicio')
         
-def eliminar(request, idServicio):
+def eliminarS(request, idServicio):
     bc=Servicio.objects.get(idServicio=idServicio)
     bc.delete()
     return redirect('listaServicio')

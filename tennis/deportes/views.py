@@ -39,7 +39,7 @@ def crear_editarDeporteD(request, idDeporte=0):
 
 
        
-def eliminar (request, idDeporte):
+def eliminarD (request, idDeporte):
     bc=DeporteD.objects.get(pk=idDeporte)
     bc.delete()
     return redirect('listaD')
